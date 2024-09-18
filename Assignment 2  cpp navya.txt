@@ -1,0 +1,167 @@
+ASSIGNMENT 2:-
+
+1) Write a program to check whether a number is prime or not
+
+#include<iostream>
+
+using namespace std;
+int main()
+{ 
+   int num,i,count=0;
+   cout<<"Enter the number to be checked:";
+   cin>>num;
+   for(i=1;i<num;i++)
+   {
+        if(num%i==0)
+         count++;
+   }
+   if(count>1)
+           cout<<"\n"<<num<< "is not prime";
+   else
+           cout<<"\n"<<num<<"is prime";
+           
+    return 0;
+}
+
+Output:-
+Enter the number to be checked:6
+
+6is not prime
+
+=== Code Execution Successful ===
+
+2)
+
+	int num, i, count, n, isprime;
+	cout << "enter a number";
+	cin >> n;
+	count = 0;
+	for (num = 1; count <= n; num++)
+	{
+		isprime = 0;
+		count++;
+		for (i = 2; i < num ; i++) {
+			if (num % i == 0) {
+
+				isprime = 0;
+				break;
+			}
+
+		}
+		if (isprime == 0 && num != 1)
+			cout << num << endl;
+	}
+	return 0;
+	}
+
+3)
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i, j,num=5;
+	cout << "Enter the num:";
+	cin >> num;
+
+	for (i = 1; i <= num; i++)
+	{
+		for (j = 1; j <= i; j++)
+		{
+			cout << (char)('A' + j - 1) << " ";
+		}
+		cout << endl;
+	}
+	return 0;
+
+}
+
+Output:-
+Enter the num:9
+A
+A B
+A B C
+A B C D
+A B C D E
+A B C D E F
+A B C D E F G
+A B C D E F G H
+A B C D E F G H I
+
+
+4) To perform mathematical operation
+
+#include<iostream>
+
+using namespace std;
+int main()
+{ 
+   float num1,num2;
+   char oper;
+   cout<<"enter an operator:";
+   cin>>oper;
+   cout<<"enter two numbers:";
+   cin>>num1>>num2;
+   
+   switch(oper)
+   {
+       case'+':
+       cout<<num1<<"+"<<num2<<"="<<num1+num2;
+       break;
+       case'-':
+       cout<<num1<<"-"<<num2<<"="<<num1-num2;
+       break;
+       case'*':
+       cout<<num1<<"*"<<num2<<"="<<num1*num2;
+       break;
+       case'/':
+       cout<<num1<<"/"<<num2<<"="<<num1/num2;
+       break;
+       default:
+       cout<<"Exit";
+       
+   }
+    return 0;
+}
+
+Output: 
+enter an operator:*
+enter two numbers:2
+2
+2*2=4
+
+=== Code Execution Successful ===
+
+5)
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i, j,num;
+	cout << "Enter the num:";
+	cin >> num;
+
+	for (i = 0; i <= num; i++)
+	{
+		for (j = 1; j <= i; j++)
+		{
+			cout << (int)(1+ j - 1) << " ";
+		}
+		cout << endl;
+	}
+	return 0;
+
+}
+
+Output:-
+Enter the num:9
+
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+1 2 3 4 5 6
+1 2 3 4 5 6 7
+1 2 3 4 5 6 7 8
+1 2 3 4 5 6 7 8 9
